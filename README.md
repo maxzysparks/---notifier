@@ -1,16 +1,13 @@
-# ---notifier
-Here is a simple outline of a code that can notify you when a token increases or decreases in price:
-This code assumes that you have defined a function called get_current_price() that takes a token as input and returns its current price, 
-and a function called send_notification() that takes a message as input and sends a notification to you.
+# Token Price Checker
+This is a simple Python script that checks the current price of a given token and sends a notification if it is above or below a given threshold.
 
-You can use this code by calling the check_price() function and passing in the token you want to track 
-and the threshold price at which you want to be notified.
-The function will query the current price of the token and compare it to the threshold,
-and if the price is above or below the threshold, it will send a notification to you.
+Prerequisites
+Python 3.x
+Requests library (install with pip install requests)
+Usage
+To use the script, call the check_price() function with the following arguments:
 
-For example, if you want to be notified when the price of BTC (Bitcoin) decreases below $50,000, you can call the check_price() function like this:
 
-check_price('BTC', 50000)
-
-This code is just a simple outline, so you may need to add additional logic and error-handling to make it more robust and efficient.
-Additionally, you will need to implement the get_current_price() and send_notification() functions in order to make this code work.
+check_price(token: str, threshold: float)
+token is the name of the token to check the price of.
+threshold is the price threshold. If the current price of the token is above or below this threshold, a notification will be sent.
